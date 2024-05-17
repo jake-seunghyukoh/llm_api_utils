@@ -19,7 +19,6 @@ client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 
 def get_logit_bias(targets: List[int], penalty=0.5) -> dict:
-    # https://platform.openai.com/docs/api-reference/chat/create#chat-create-logit_bias
     # Create a logit bias to encourage the model to talk about the targets
     logit_bias = {target: penalty for target in targets}
     return logit_bias
