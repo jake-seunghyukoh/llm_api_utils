@@ -25,6 +25,7 @@ def complete(
     system_message="",
     logit_bias=None,  # dictionary {2435: 0.7, 333: 100}
     return_raw_completion=False,
+    **kwargs,
 ):
     completion = client.chat.completions.create(
         model=model,
